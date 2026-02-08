@@ -17,7 +17,7 @@ class Agent:
     def run(self, task, context=""):
         prompt = f"Context:\n{context}\n\nTask:\n{task}" if context else task
         response = client.messages.create(
-            model="claude-sonnet-4-20250514",
+            model="claude-3-haiku-20240307",
             max_tokens=4096,
             system=self.system_prompt,
             messages=[{"role": "user", "content": prompt}]
